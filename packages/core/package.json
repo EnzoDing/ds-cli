@@ -1,11 +1,14 @@
 {
   "name": "@ds-cli/core",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "ds-cli core",
   "author": "dingsheng <dingsheng@qdspr.com>",
   "homepage": "",
   "license": "ISC",
   "main": "lib/core.js",
+  "bin": {
+    "ds-cli": "bin/index.js"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -20,6 +23,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@ds-cli/utils": "^1.0.1"
-  }
+    "@ds-cli/utils": "^1.0.0"
+  },
+  "gitHead": "e24f311ab21cb96bb209b5e88f5e0f68c661146d"
 }

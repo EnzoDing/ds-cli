@@ -1,6 +1,6 @@
 {
   "name": "@ds-cli/utils",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "ds-cli utils",
   "author": "dingsheng <dingsheng@qdspr.com>",
   "homepage": "",
@@ -18,5 +18,6 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  }
+  },
+  "gitHead": "e24f311ab21cb96bb209b5e88f5e0f68c661146d"
 }
