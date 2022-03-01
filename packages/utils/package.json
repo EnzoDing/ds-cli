@@ -1,6 +1,6 @@
 {
   "name": "@ds-cli/utils",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "ds-cli utils",
   "author": "dingsheng <dingsheng@qdspr.com>",
   "homepage": "",
@@ -14,10 +14,10 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmmirror.com/"
+    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "gitHead": "9031c8f7aadb98028919bd8754f2793c2b96fd5e"
+  "gitHead": "a6976b655fb67b6777356ec061fd323f881679f1"
 }
