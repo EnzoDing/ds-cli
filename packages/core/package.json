@@ -1,6 +1,6 @@
 {
   "name": "@ds-cli/core",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "ds-cli core",
   "author": "dingsheng <dingsheng@qdspr.com>",
   "homepage": "",
@@ -23,7 +23,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@ds-cli/utils": "^1.0.0"
+    "@ds-cli/utils": "^1.0.2"
   },
   "gitHead": "e24f311ab21cb96bb209b5e88f5e0f68c661146d"
 }
