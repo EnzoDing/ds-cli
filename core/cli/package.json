@@ -24,10 +24,17 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@ds-cli/utils": "file:../../utils/utils",
     "@ds-cli/log": "file:../../utils/log",
+    "@ds-cli/utils": "file:../../utils/utils",
+    "colors": "^1.4.0",
+    "dotenv": "^16.0.0",
     "import-local": "^3.1.0",
-    "npmlog": "^6.0.1"
+    "minimist": "^1.2.5",
+    "npmlog": "^6.0.1",
+    "path-exists": "^4.0.0",
+    "root-check": "^1.0.0",
+    "semver": "^7.3.5",
+    "user-home": "^3.0.0"
   },
   "gitHead": "cb61cf9ea7fbb53f0394b543427bf9ac60ebee67"
 }
