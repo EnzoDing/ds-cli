@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 const importLocal = require('import-local')
-const log = require('npmlog')
+const log = require('@ds-cli/log')
 
 if(importLocal(__filename)) {
     // 本地项目的node_modules中如果存在库则 使用本地库而非全局库

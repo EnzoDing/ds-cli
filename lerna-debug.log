@@ -1,0 +1,9 @@
+0 silly argv {
+0 silly argv   _: [ 'create' ],
+0 silly argv   lernaVersion: '4.0.0',
+0 silly argv   '$0': 'lerna',
+0 silly argv   name: '@ds-cli/index'
+0 silly argv }
+1 notice cli v4.0.0
+2 verbose rootPath /Users/shengding/Projects/tmp/commander/ds-cli
+3 error

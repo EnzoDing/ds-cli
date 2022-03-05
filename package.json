@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@ds-cli/core": "^1.0.7",
     "lerna": "^4.0.0"
   }
 }
