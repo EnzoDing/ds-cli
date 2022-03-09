@@ -2,5 +2,5 @@
 .vscode
 node_modules
 packages/**/node_modules
-packages/**/package-lock.json
+packages/**/index-lock.json
 lerna-debug.index

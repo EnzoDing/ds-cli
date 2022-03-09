@@ -9,6 +9,9 @@ module.exports = () => {
         prepare()
         registerCli()
     } catch (e) {
-        log.error(e)
+        log.error(e.message)
+        if(process.env.LOG_LEVEL === 'verbose') {
+            console.log(e)
+        }
     }
 };

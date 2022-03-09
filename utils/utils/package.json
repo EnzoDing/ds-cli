@@ -5,7 +5,7 @@
   "author": "dingsheng <dingsheng@qdspr.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/utils.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -20,5 +20,10 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "gitHead": "cb61cf9ea7fbb53f0394b543427bf9ac60ebee67"
+  "gitHead": "cb61cf9ea7fbb53f0394b543427bf9ac60ebee67",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "semver": "^7.3.5",
+    "url-join": "^4.0.1"
+  }
 }

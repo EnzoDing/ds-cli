@@ -51,7 +51,7 @@ function checkEnv() {
         })
     }
     createDefaultConfig()
-    log.verbose('环境变量', process.env.CLI_HOME_PATH)
+    log.info('cli cache home', process.env.CLI_HOME_PATH)
 }
 function createDefaultConfig() {
     const cli_config = {

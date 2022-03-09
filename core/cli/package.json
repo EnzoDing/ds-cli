@@ -27,6 +27,7 @@
     "@ds-cli/log": "file:../../utils/log",
     "@ds-cli/utils": "file:../../utils/utils",
     "@ds-cli/init": "file:../../commands/init",
+    "@ds-cli/exec": "file:../exec",
     "colors": "^1.4.0",
     "commander": "^9.0.0",
     "dotenv": "^16.0.0",
