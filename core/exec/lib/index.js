@@ -4,6 +4,7 @@ const path = require('path')
 const userHome = require('user-home')
 
 const Package = require('@ds-cli/package')
+const log = require('@ds-cli/log')
 
 const COMMANDS = {
     init: '@imooc-cli/init'
@@ -31,10 +32,10 @@ async function exec() {
 
         // package是否存在
         if (await pkg.exists()) {
+            // 存在 -> 更新package
             await pkg.update()
-            // 更新package
         } else {
-            // 安装package
+            // 不存在 -> 安装package
             await pkg.install()
         }
     } else {
@@ -49,7 +50,11 @@ async function exec() {
     const rootFile = pkg.getRootFilePath()
 
     if (rootFile) {
-        require(rootFile)(...arguments)
+        try {
+            require(rootFile)(Array.from(arguments))
+        } catch (e) {
+            log.error(e.message)
+        }
     }
 }
 module.exports = exec;

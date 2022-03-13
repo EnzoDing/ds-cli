@@ -1,16 +1,11 @@
 {
-  "name": "@ds-cli/exec",
+  "name": "@ds-cli/command",
   "version": "1.0.7",
   "description": "> TODO: description",
   "author": "dingsheng <dingduoduo0916@gmail.com>",
   "homepage": "https://github.com/dingsheng1214/ds-cli#readme",
   "license": "ISC",
   "main": "lib/index.js",
-  "dependencies": {
-    "@ds-cli/log": "file:../../utils/log",
-    "@ds-cli/package": "file:../../models/package",
-    "user-home": "^3.0.0"
-  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"

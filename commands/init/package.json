@@ -10,6 +10,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
+  "dependencies": {
+    "@ds-cli/command": "file:../../models/command"
+  },
   "files": [
     "lib"
   ],

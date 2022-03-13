@@ -1,6 +1,25 @@
-# `@ds-cli/index`
+# `@ds-cli/package`
 
-> TODO: description
+## description
+`Package`类 为一个NPM包的抽象
+
+```js
+class Package {
+    targetPath
+    storePath
+    name
+    version
+    
+    // 包是否存在
+    exists(){}
+    // 包更新
+    update() {}
+    // 包安装
+    install() {}
+    // 包入口文件 package.json下的main
+    getRootFile() {}
+}
+```
 
 ## Usage
 
