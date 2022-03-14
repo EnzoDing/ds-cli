@@ -14,7 +14,7 @@ class Command {
             chain = chain.then(() => this._initArgs())
             chain = chain.then(() => this.init())
             chain = chain.then(() => this.exec())
-            chain.catch(err => logger.error(err))
+            chain.catch(err => console.error(err))
         })
     }
 
@@ -30,7 +30,6 @@ class Command {
     _initArgs() {
         this._cmd = this._argv[this._argv.length - 1]
         this._argv = this._argv.slice(0, -1)
-        console.log(this._cmd, this._argv)
     }
 }
 

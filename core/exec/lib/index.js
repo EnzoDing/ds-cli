@@ -1,6 +1,7 @@
 'use strict';
 
 const path = require('path')
+const { spawn } = require('child_process')
 const userHome = require('user-home')
 
 const Package = require('@ds-cli/package')
@@ -51,10 +52,40 @@ async function exec() {
 
     if (rootFile) {
         try {
-            require(rootFile)(Array.from(arguments))
+            // 在当前进程中执行
+            // require(rootFile)(Array.from(arguments))
+
+            // 子进程中执行
+            _childProcessRequire(rootFile, arguments)
         } catch (e) {
             log.error(e.message)
         }
     }
+}
+
+function _childProcessRequire(rootFile, _arguments) {
+    const args = Array.from(_arguments)
+    let cmd = args[_arguments.length - 1]
+    cmd = {...cmd, ...cmd.opts()}
+    const o = Object.create(null)
+    Object.keys(cmd).forEach(key => {
+        if (cmd.hasOwnProperty(key) && !key.startsWith('_') && key !== 'parent') {
+            o[key] = cmd[key]
+        }
+    })
+    args[args.length - 1] = o
+
+    const code = `require(${JSON.stringify(rootFile)}).call(null,${JSON.stringify(args)})`
+    // windows下执行 spawn('cmd', ['/c', 'node', '-e', code])
+    const cp = spawn('node', ['-e', code], {
+        cwd: process.cwd(),
+        stdio: 'inherit'
+    })
+    cp.on('error', err => {
+        log.verbose('命令执行失败: ', e)
+    })
+    cp.on('exit', e => {
+        log.verbose('命令执行完毕: ', e)
+    })
 }
 module.exports = exec;
