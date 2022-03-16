@@ -20,12 +20,15 @@ class InitCommand extends Command {
 
    async exec() {
       // 1 准备阶段
-      await this._prepare()
+      const projectInfo = await this._prepare()
+      console.log(projectInfo)
       // 2 下载阶段
+      this._download()
       // 3 安装阶段
    }
 
    async _prepare(){
+      let projectInfo = {}
       // 1 获取当前目录是否为空
       const currentPath = process.cwd()
       if(!this._isDirEmpty(currentPath)) {
@@ -68,7 +71,7 @@ class InitCommand extends Command {
       }])
       // 4 获取项目的基本信息
       if (init_type === INIT_TYPE.PROJECT) {
-         const answer = await inquirer.prompt([
+         const { projectName, projectVersion } = await inquirer.prompt([
             {
                type: 'input',
                message: '请输入项目名称',
@@ -88,10 +91,21 @@ class InitCommand extends Command {
                },
             }
          ])
-         console.log(answer)
+         projectInfo = {
+            type: init_type,
+            projectName,
+            projectVersion
+         }
+      } else if (init_type === INIT_TYPE.COMPONENT) {
+
       }
+
+      return projectInfo
    }
-   _download() {}
+
+   _download() {
+      // 1 TODO 调用接口获取项目模板列表
+   }
    _install() {}
 
    _isDirEmpty(currentPath) {
